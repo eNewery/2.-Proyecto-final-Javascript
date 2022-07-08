@@ -1,0 +1,89 @@
+* {
+  box-sizing: 0;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  color: rgb(184, 184, 184);
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
+  background-color: rgb(255, 238, 238);
+}
+body {
+  display: grid;
+  grid-template-rows: 10% 80% 10%;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header" "main" "footer";
+  justify-content: center;
+  align-items: center;
+}
+header {
+  grid-area: header;
+  width: 100%;
+  height: 100%;
+}
+main {
+  grid-area: main;
+  width: 100%;
+  height: 100%;
+}
+footer {
+  grid-area: footer;
+  width: 100%;
+  height: 100%;
+}
+.forms{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80%;
+
+}
+form {
+  height: 100%;
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#users {
+  display: flex;
+  border-radius: 5px;
+  border: 1px solid rgb(184, 184, 184);
+  background-color: rgb(228, 228, 228);
+  transition: 0.5s;
+}
+#users:hover p {
+  background-color: rgb(98, 98, 98);
+  transition: 0.5s;
+  color: white;
+}
+.button {
+  width: 100%;
+  text-align: center;
+}
+#boton {
+  border: 1px solid rgb(184, 184, 184);
+  padding: 0.5em;
+  transition: 1s;
+}
+#boton:hover {
+  background-color: rgb(98, 98, 98);
+  color: white;
+  transition: 1s;
+}
+#users p {
+  padding: 0.5em;
+  transition: 0.5s;
+}
+.inputs {
+  padding: 0.5em;
+  border: 1px solid rgb(184, 184, 184);
+}
+.tt {
+  color: rgb(102, 102, 102);
+}

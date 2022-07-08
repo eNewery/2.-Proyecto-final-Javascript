@@ -1,22 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/main.js" defer></script>
-  <style>*{list-style: none;}</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto final</title>
+    <script src="js/main.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h1 id="titulo">Hola mundo</h1>
-  <div id="subtitulo"></div>
-  <ul>
-    <li class="componente"></li>
-    <li class="componente"></li>
-    <li class="componente"></li>
-    <li class="componente"></li>
-  </ul>
+    <header>
+
+    </header>
+    <main>
+        <div class="forms">
+            <form action="" onsubmit="">
+                <h1 class="tt">Register</h1>
+                <input class="inputs" id="nombre" type="text" placeholder="Name" style="margin:0.3em;">
+            <input class="inputs" id="edad" type="text" placeholder="Age" style="margin:0.3em;">
+            <input class="inputs" id="email" type="email" placeholder="E-Mail" style="margin:0.3em;">
+            <div class="button">
+            <button onclick="generarUsuario()" id="boton" type="reset">Create user</button>
+        </div>
+            <div class="title">
+                <h2 class="tt">Last user registred</h2>
+            </div>
+            <div id="users">
+        
+        
+            </div>
+            </form>
+    <form action="" onsubmit="">
+        <h1 class="tt">Login</h1>
+        <input class="inputs" id="nombre" type="text" placeholder="Name" style="margin:0.3em;">
+    <input class="inputs" id="edad" type="password" placeholder="Password" style="margin:0.3em;">
+    <div class="button">
+    <button onclick="generarUsuario()" id="boton" type="reset">Login</button>
+</div>
+</form>
+</div>
+</main>
+<footer>
+
+</footer>
 </body>
 </html>
