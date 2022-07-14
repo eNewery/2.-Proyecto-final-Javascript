@@ -56,8 +56,11 @@ form {
   border: 1px solid rgb(184, 184, 184);
   background-color: rgb(228, 228, 228);
   transition: 0.5s;
+width: 800px;
+display: flex;
+justify-content: center;
 }
-#users:hover p {
+#users:hover {
   background-color: rgb(98, 98, 98);
   transition: 0.5s;
   color: white;
@@ -79,6 +82,9 @@ form {
 #users p {
   padding: 0.5em;
   transition: 0.5s;
+  animation-name: upper;
+  animation-duration: 5s;
+  transition: 1s;
 }
 .inputs {
   padding: 0.5em;
@@ -86,4 +92,13 @@ form {
 }
 .tt {
   color: rgb(102, 102, 102);
+}
+.activaInput{
+    border:1px solid red;
+}
+.success p{
+  color:rgb(0, 255, 21);
+}
+.err p{
+  color:red;
 }
