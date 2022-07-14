@@ -1,4 +1,10 @@
 
+
+function cap(){
+    var agecap = document.getElementById("agecap")
+    var inputcap = document.getElementById("inputcap").value
+    inputcap < 18 ? agecap.innerHTML = "Eres menor!" : agecap.innerHTML = "Eres mayor"
+}
 //Array en donde se almacenan los objetos Persona
 const Personas = []
 
@@ -80,29 +86,41 @@ function generarUsuario() {
     }
 
     else {
+        Swal.fire({
+            title: '¿Seguro quieres proceder?',
+            icon: 'info',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+          }).then((result) => {
+            if (result.isConfirmed) {
+              name.classList.remove("activaInput")
+              age.classList.remove("activaInput")
+              email.classList.remove("activaInput")
+              localStorage.setItem("Personas", JSON.stringify(Personas))
+              console.info("Los datos se han guardado satisfactoriamente.")
+              console.log(Personas)
+              //Es ejecutada la función agregarUsuario *
+      
+              Toastify({
+                  text: "Usuario registrado correctamente!",
+                  duration: 1000,
+                  newWindow: true,
+                  close: true,
+                  gravity: "top", // 
+                  position: "left", // 
+                  stopOnFocus: true,
+                  style: {
+                      background: "linear-gradient(to right, #AAaaaa, #aaaabb)",
+                  },
+                  onClick: function () { } // 
+              }).showToast();
+              agregarUsuario(persona.nombre, persona.edad, persona.correo)
+            }
+          })
         //Finalmente, si los datos son correctos son guardados en el localStorage
-        name.classList.remove("activaInput")
-        age.classList.remove("activaInput")
-        email.classList.remove("activaInput")
-        localStorage.setItem("Personas", JSON.stringify(Personas))
-        console.info("Los datos se han guardado satisfactoriamente.")
-        console.log(Personas)
-        //Es ejecutada la función agregarUsuario *
 
-        Toastify({
-            text: "Usuario registrado correctamente!",
-            duration: 1000,
-            newWindow: true,
-            close: true,
-            gravity: "top", // 
-            position: "left", // 
-            stopOnFocus: true,
-            style: {
-                background: "linear-gradient(to right, #AAaaaa, #aaaabb)",
-            },
-            onClick: function () { } // 
-        }).showToast();
-        agregarUsuario(persona.nombre, persona.edad, persona.correo)
     }
 }
 
@@ -122,4 +140,9 @@ function agregarUsuario(user, age, email) {
 let button = document.querySelector("#boton")
 button.addEventListener('keyup', generarUsuario)
 button.addEventListener('click', generarUsuario)
+
+
+let namelog = document.querySelector("#namelog")
+let agelog = document.querySelector("#agelog");
+
 

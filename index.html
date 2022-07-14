@@ -8,12 +8,18 @@
     <script src="js/main.js" defer></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+    <script src="sweetalert2.min.js" defer></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
 </head>
 <body>
     <header>
 
     </header>
     <main>
+        <input id="inputcap" type="text" placeholder="Introduce tu edad"> <button onclick="cap()">Verificar
+        </button>
+        <p id="agecap"></p>
         <div class="forms">
             <form action="" onsubmit="">
                 <h1 class="tt">Register</h1>
@@ -34,10 +40,10 @@
             </form>
     <form action="" onsubmit="">
         <h1 class="tt">Login</h1>
-        <input class="inputs" id="nombre" type="text" placeholder="Name" style="margin:0.3em;">
-    <input class="inputs" id="edad" type="password" placeholder="Password" style="margin:0.3em;">
+        <input class="inputs" id="namelog" type="text" placeholder="Name" style="margin:0.3em;">
+    <input class="inputs" id="agelog" type="password" placeholder="Password" style="margin:0.3em;">
     <div class="button">
-    <button onclick="generarUsuario()" id="boton" type="reset">Login</button>
+    <button onclick="loguearUsuario()" id="boton" type="reset">Login</button>
 </div>
 </form>
 </div>
