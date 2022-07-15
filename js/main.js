@@ -87,12 +87,10 @@ function generarUsuario() {
 
     else {
         Swal.fire({
-            title: '¿Seguro quieres proceder?',
+            title: '¿Seguro quieres crear un usuario?',
             icon: 'info',
-            showCancelButton: true,
             confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Yes, delete it!'
+            confirmButtonText: '¡Crear ahora!'
           }).then((result) => {
             if (result.isConfirmed) {
               name.classList.remove("activaInput")
